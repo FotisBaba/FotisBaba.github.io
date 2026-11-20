@@ -76,7 +76,11 @@ nav a:hover{color:var(--text)}
 .hero{border-top:0;padding:96px 0 88px}
 .hero h1{max-width:920px;font-size:clamp(38px,6.2vw,64px);line-height:1.05;font-weight:700;letter-spacing:-.02em}
 .hero .lead{margin-top:28px;max-width:720px;font-size:19px}
-.hero .btns{margin-top:36px}
+.email{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-family:var(--display);font-size:clamp(20px,3vw,26px);font-weight:600;color:var(--text);overflow-wrap:anywhere}
+.email .addr{user-select:all}
+.email+.btns{margin-top:20px}
+.copy{user-select:none;min-height:44px;padding:8px 18px;border-radius:8px;border:1px solid var(--accent);background:transparent;color:var(--accent);font:500 15px/1 Inter,system-ui,sans-serif;cursor:pointer}
+.copy:hover{background:var(--accent);color:var(--on-accent)}
 
 /* kid you not */
 .clips{margin-top:20px;display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
@@ -136,10 +140,10 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
 <section id="top" class="hero">
   <div class="wrap">
     <p class="eyebrow">Game developer · Game &amp; technical designer · Unity · Unreal · VR</p>
-    <h1>I build gameplay, UI and online multiplayer, from first design doc to Steam release.</h1>
-    <p class="lead">Solo developer of Kid You Not!, a multiplayer party game launching on Steam around Christmas 2026. Before that I shipped features for four client games at OnTheBlockGaming and built a networked multi-user VR RPG for my diploma thesis. Right now I'm also building an Unreal Engine 5 action RPG demo in C++ with the Gameplay Ability System.</p>
+    <h1>I design and build gameplay, UI and online multiplayer, from first design doc to release.</h1>
+    <p class="lead">Solo developer of Kid You Not!, a multiplayer party game launching on Steam around Christmas 2026. Before that I shipped features for four client games at OnTheBlockGaming and built a networked multi-user VR RPG for my master's thesis. Right now I'm working on various projects and building an Unreal Engine 5 action RPG demo in C++ with the Gameplay Ability System.</p>
+    <p class="email"><span class="addr">fbampaniotis@outlook.com</span> <button type="button" class="copy" data-copy="fbampaniotis@outlook.com">Copy</button></p>
     <div class="btns">
-      <a class="btn primary" href="mailto:fbampaniotis@outlook.com">Email me</a>
       <a class="btn" href="https://www.linkedin.com/in/fotios-bampaniotis/">LinkedIn</a>
       <a class="btn" href="https://github.com/FotisBaba">GitHub</a>
     </div>
@@ -247,7 +251,7 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
 
 <section id="vrpg" class="alt">
   <div class="wrap pad">
-    <p class="eyebrow">Diploma thesis · Technical University of Crete · School of ECE · 2024</p>
+    <p class="eyebrow">Master's thesis · Technical University of Crete · School of ECE · 2024</p>
     <h2>VRPG: build worlds together, then play them</h2>
     <p class="lead">A networked VR platform I built solo. In creator mode, friends shape a world together. In play mode, one of them becomes the Game Master and narrates while the others fight through it as wizards. Evaluated with users and tested on Oculus Rift S and Quest 2.</p>
     <a class="more-link" href="https://github.com/FotisBaba/Thesis">Read the thesis on GitHub →</a>
@@ -403,8 +407,8 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
   <div class="wrap pad" style="padding-bottom:64px">
     <h2>Let's make something.</h2>
     <p class="lead">I'm open to game developer, gameplay programmer, game and technical designer, and 3D/VR developer roles, plus QA and freelance Unity work (bug fixing, prototyping). Full-time, part-time or contract; remote or on-site.</p>
-    <div class="btns" style="margin-top:28px">
-      <a class="btn primary" href="mailto:fbampaniotis@outlook.com">fbampaniotis@outlook.com</a>
+    <p class="email"><span class="addr">fbampaniotis@outlook.com</span> <button type="button" class="copy" data-copy="fbampaniotis@outlook.com">Copy</button></p>
+    <div class="btns">
       <a class="btn" href="https://www.linkedin.com/in/fotios-bampaniotis/">LinkedIn</a>
       <a class="btn" href="https://github.com/FotisBaba">GitHub</a>
       <a class="btn" href="https://babain.itch.io">itch.io</a>
@@ -413,6 +417,16 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
   </div>
 </section>
 </main>
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var done = function (t) { b.textContent = t; setTimeout(function () { b.textContent = 'Copy'; }, 1800); };
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(b.dataset.copy).then(function () { done('Copied'); }, function () { done('Select to copy'); });
+    } else { done('Select to copy'); }
+  });
+});
+</script>
 
 </body>
 </html>
