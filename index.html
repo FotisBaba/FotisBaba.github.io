@@ -84,7 +84,7 @@ nav a:hover{color:var(--text)}
 /* unreal */
 .systems{padding:28px}
 .systems h3{font-size:20px;font-weight:600}
-.systems dl{margin:16px 0 0;display:grid;gap:14px}
+.systems dl{margin:16px 0 0;display:grid;gap:14px 32px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .systems dt{font-weight:600;font-size:15px}
 .systems dd{margin:2px 0 0;font-size:15px;color:var(--muted)}
 .systems code{font-size:13px;background:var(--chip);padding:1px 6px;border-radius:4px;color:var(--text)}
@@ -293,7 +293,8 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
 </section>
 
 <section id="unreal">
-  <div class="wrap pad grid two">
+  <div class="wrap pad">
+  <div class="grid two">
     <div>
       <p class="eyebrow">In progress · Unreal Engine 5</p>
       <h2>Action RPG in C++</h2>
@@ -301,6 +302,7 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
       <ul class="bullets">
         <li>Abilities, attributes and gameplay effects with GAS, in C++ and Blueprints</li>
         <li>Light and heavy attack combos, weapon equip and unequip, hit pause</li>
+        <li>Enemy AI with sight perception, team attitudes and crowd avoidance</li>
         <li>A playable showcase level of my own design, targeted for mid-December 2026</li>
       </ul>
       <ul class="chips" aria-label="Tech">
@@ -308,7 +310,33 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
       </ul>
       <a class="more-link" href="https://github.com/FotisBaba/Action-RPG">View the code on GitHub →</a>
     </div>
-    <div class="card systems">
+    <div>
+      <div class="media">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/arpg/group_fight.jpg" aria-label="Gameplay: the hero fights a group of Guardian enemies with light and heavy axe combos">
+          <source src="assets/arpg/group_fight.webm" type="video/webm">
+          <source src="assets/arpg/group_fight.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="clips">
+        <figure>
+          <div class="media"><video autoplay muted loop playsinline preload="none" poster="assets/arpg/equip_axe.jpg" aria-label="The hero draws the axe from his back">
+            <source src="assets/arpg/equip_axe.webm" type="video/webm"><source src="assets/arpg/equip_axe.mp4" type="video/mp4"></video></div>
+          <figcaption>Equip ability</figcaption>
+        </figure>
+        <figure>
+          <div class="media"><video autoplay muted loop playsinline preload="none" poster="assets/arpg/combo.jpg" aria-label="An axe combo landing on enemies, with hit reactions and health bars dropping">
+            <source src="assets/arpg/combo.webm" type="video/webm"><source src="assets/arpg/combo.mp4" type="video/mp4"></video></div>
+          <figcaption>Combos and hit reactions</figcaption>
+        </figure>
+        <figure>
+          <div class="media"><video autoplay muted loop playsinline preload="none" poster="assets/arpg/enemy_death.jpg" aria-label="A Guardian dies and dissolves into particles">
+            <source src="assets/arpg/enemy_death.webm" type="video/webm"><source src="assets/arpg/enemy_death.mp4" type="video/mp4"></video></div>
+          <figcaption>Enemy death</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+    <div class="card systems" style="margin-top:40px">
       <h3>How it's put together</h3>
       <dl>
         <div><dt>Ability system</dt><dd>Custom ability system component and attribute set, with damage resolved in a gameplay effect execution calculation (<code>GEExecCalc_DamageTaken</code>).</dd></div>
