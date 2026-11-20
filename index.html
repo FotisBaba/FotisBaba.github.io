@@ -54,6 +54,9 @@ ul.bullets{margin:24px 0 0;padding-left:20px;display:flex;flex-direction:column;
 .card{padding:28px;border-radius:12px;background:var(--card);border:1px solid var(--card-line)}
 .card h3{font-size:22px;font-weight:600}
 .card .meta{margin-top:6px;font-size:14px;color:var(--faint)}
+.card h3 a{color:var(--text)}
+.stores{margin-top:10px;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px}
+.stores a{display:inline-block;padding:4px 0}
 .card ul{margin:16px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:16px}
 .media{border-radius:12px;overflow:hidden;background:#1A1E25;border:1px solid var(--card-line)}
 .media video,.media img{width:100%;height:auto}
@@ -134,7 +137,7 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
   <div class="wrap">
     <p class="eyebrow">Game developer · Game &amp; technical designer · Unity · Unreal · VR</p>
     <h1>I build gameplay, UI and online multiplayer, from first design doc to Steam release.</h1>
-    <p class="lead">Solo developer of Kid You Not!, a multiplayer party game launching on Steam around Christmas 2026. Before that I shipped features for four client games at OnTheBlockGaming and built a networked multi-user VR RPG for my diploma thesis. Right now I'm also building an Unreal Engine 5 action RPG in C++ with the Gameplay Ability System.</p>
+    <p class="lead">Solo developer of Kid You Not!, a multiplayer party game launching on Steam around Christmas 2026. Before that I shipped features for four client games at OnTheBlockGaming and built a networked multi-user VR RPG for my diploma thesis. Right now I'm also building an Unreal Engine 5 action RPG demo in C++ with the Gameplay Ability System.</p>
     <div class="btns">
       <a class="btn primary" href="mailto:fbampaniotis@outlook.com">Email me</a>
       <a class="btn" href="https://www.linkedin.com/in/fotios-bampaniotis/">LinkedIn</a>
@@ -199,6 +202,7 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
       <article class="card">
         <h3>Step Pets</h3>
         <p class="meta">Step-tracking virtual pet game · Mobile · PlayFab · Firebase</p>
+        <p class="stores"><a href="https://play.google.com/store/apps/details?id=com.stella_gaming.step_pets">Google Play</a><a href="https://apps.apple.com/us/app/step-pets/id6748984903">App Store</a></p>
         <ul>
           <li>Step tracking and step-to-currency conversion, synced to PlayFab Economy v2</li>
           <li>Login with device-ID persistence across sessions</li>
@@ -208,8 +212,9 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
         </ul>
       </article>
       <article class="card">
-        <h3>Cross Spin</h3>
+        <h3><a href="https://crossspingame.com/">Cross Spin</a></h3>
         <p class="meta">Word puzzle game · Mobile</p>
+        <p class="stores"><a href="https://play.google.com/store/apps/details?id=com.jopatgames.crossspin">Google Play</a><a href="https://apps.apple.com/us/app/cross-spin/id6680200745">App Store</a></p>
         <ul>
           <li>Account creation, login and password recovery</li>
           <li>Virtual and physical keyboard input</li>
@@ -296,14 +301,14 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
   <div class="wrap pad">
   <div class="grid two">
     <div>
-      <p class="eyebrow">In progress · Unreal Engine 5</p>
-      <h2>Action RPG in C++</h2>
-      <p class="lead">A third-person action RPG built in C++ on the Gameplay Ability System, my route into Unreal. Once the core combat is done, I'm building an original showcase level to show level and environment design.</p>
+      <p class="eyebrow">Demo · In progress · Unreal Engine 5</p>
+      <h2>Action RPG demo in C++</h2>
+      <p class="lead">A third-person combat demo built in C++ on the Gameplay Ability System, and my route into Unreal. It's a focused demo, not a full game: one playable level of my own design that shows combat, enemy AI, and level and environment design.</p>
       <ul class="bullets">
         <li>Abilities, attributes and gameplay effects with GAS, in C++ and Blueprints</li>
         <li>Light and heavy attack combos, weapon equip and unequip, hit pause</li>
         <li>Enemy AI with sight perception, team attitudes and crowd avoidance</li>
-        <li>A playable showcase level of my own design, targeted for mid-December 2026</li>
+        <li>The finished demo, a playable showcase level of my own design, is targeted for mid-December 2026</li>
       </ul>
       <ul class="chips" aria-label="Tech">
         <li>Unreal Engine 5</li><li>C++</li><li>Blueprints</li><li>GAS</li><li>Enhanced Input</li>
@@ -377,12 +382,12 @@ footer{margin-top:64px;font-size:14px;color:var(--faint)}
       </article>
       <article class="card small-card">
         <p class="when">Unity · 3D puzzle</p>
-        <h3>Solar Worker</h3>
+        <h3><a href="https://github.com/FotisBaba/SolarWorker">Solar Worker</a></h3>
         <p class="body">Rotate solar panels to face the sun on randomized levels, while a bird chases you and a friendly NPC scares it off.</p>
       </article>
       <article class="card small-card">
         <p class="when">Unity · board game</p>
-        <h3>Interstellar Hotel</h3>
+        <h3><a href="https://github.com/FotisBaba/Interstellar-Hotel">Interstellar Hotel</a></h3>
         <p class="body">A 2–4 player turn-based sci-fi economic board game, and my first game project.</p>
       </article>
       <article class="card small-card">
