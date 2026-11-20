@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fotis Bampaniotis – Game Developer &amp; Designer</title>
+<meta name="description" content="Game developer and designer working in Unity, Unreal and VR. Solo developer of Kid You Not!, a multiplayer courtroom party game coming to Steam.">
+<meta property="og:title" content="Fotis Bampaniotis – Game Developer &amp; Designer">
+<meta property="og:description" content="Unity, Unreal and VR. Solo developer of Kid You Not!, coming to Steam around Christmas 2026.">
+<meta property="og:image" content="https://fotisbaba.github.io/assets/kyn/vote_and_verdict.jpg">
+<meta property="og:url" content="https://fotisbaba.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E1014">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1014; --bg-alt:#13161C; --card:#161A20; --line:#22262E; --card-line:#262B34;
+  --text:#E9ECF1; --muted:#B7BEC9; --faint:#9AA3AF; --chip:#22262E; --btn-line:#3A404B;
+  --accent:#F5B544; --accent-hover:#FFD58A; --on-accent:#14110A;
+  --display:'Space Grotesk', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)} a:hover{color:var(--accent-hover)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+img,video{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.1}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+section{border-top:1px solid var(--line);scroll-margin-top:72px}
+section.alt{background:var(--bg-alt)}
+.pad{padding:88px 0}
+.eyebrow{margin:0 0 12px;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lead{margin-top:16px;max-width:760px;color:var(--muted)}
+h2{font-size:clamp(32px,5vw,44px);font-weight:700}
+h2.sm{font-size:clamp(28px,4vw,36px)}
+.chips{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;font-size:14px;padding:0;list-style:none}
+.chips li{padding:4px 12px;border-radius:999px;background:var(--chip)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 22px;border-radius:8px;border:1px solid var(--btn-line);color:var(--text);font-weight:500;text-decoration:none}
+.btn:hover{border-color:var(--faint);color:var(--text)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
+.btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.more-link{display:inline-block;margin-top:28px;font-weight:600}
+ul.bullets{margin:24px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.grid.two{gap:56px;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));align-items:start}
+.grid.four{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.card{padding:28px;border-radius:12px;background:var(--card);border:1px solid var(--card-line)}
+.card h3{font-size:22px;font-weight:600}
+.card .meta{margin-top:6px;font-size:14px;color:var(--faint)}
+.card ul{margin:16px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:16px}
+.media{border-radius:12px;overflow:hidden;background:#1A1E25;border:1px solid var(--card-line)}
+.media video,.media img{width:100%;height:auto}
+figure{margin:0}
+figcaption{margin-top:10px;font-size:14px;color:var(--faint)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(14,16,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+.brand{font-family:var(--display);font-weight:700;font-size:20px;color:var(--text);text-decoration:none}
+.brand:hover{color:var(--text)}
+nav ul{display:flex;flex-wrap:wrap;gap:4px 20px;margin:0;padding:0;list-style:none;font-size:15px}
+nav a{color:var(--muted);text-decoration:none;display:inline-block;padding:6px 0}
+nav a:hover{color:var(--text)}
+
+/* hero */
+.hero{border-top:0;padding:96px 0 88px}
+.hero h1{max-width:920px;font-size:clamp(38px,6.2vw,64px);line-height:1.05;font-weight:700;letter-spacing:-.02em}
+.hero .lead{margin-top:28px;max-width:720px;font-size:19px}
+.hero .btns{margin-top:36px}
+
+/* kid you not */
+.clips{margin-top:20px;display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+.clips figcaption{margin-top:6px;font-size:13px}
+.clips video{aspect-ratio:16/9;object-fit:cover}
+.vrpg-shots img{aspect-ratio:4/3;object-fit:cover}
+
+/* unreal */
+.systems{padding:28px}
+.systems h3{font-size:20px;font-weight:600}
+.systems dl{margin:16px 0 0;display:grid;gap:14px}
+.systems dt{font-weight:600;font-size:15px}
+.systems dd{margin:2px 0 0;font-size:15px;color:var(--muted)}
+.systems code{font-size:13px;background:var(--chip);padding:1px 6px;border-radius:4px;color:var(--text)}
+
+/* vrpg */
+.features h3{font-size:20px;font-weight:600}
+.features p{margin-top:10px;font-size:16px;color:var(--muted)}
+.skills h3{font-size:18px;font-weight:600}
+.skills p{margin-top:10px;font-size:15px;color:var(--muted)}
+.small-card{padding:24px}
+.small-card .when{font-size:13px;color:var(--faint)}
+.small-card h3{margin-top:6px;font-size:19px;font-weight:600}
+.small-card h3 a{color:var(--text)}
+.small-card p.body{margin-top:10px;font-size:15px;color:var(--muted)}
+footer{margin-top:64px;font-size:14px;color:var(--faint)}
+
+@media (max-width:720px){
+  .wrap{padding:0 16px}
+  .pad{padding:64px 0}
+  .hero{padding:56px 0 64px}
+  .clips{grid-template-columns:1fr 1fr}
+  .clips figure:last-child{display:none}
+  .site-header{position:static}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Fotis Bampaniotis</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#kidyounot">Kid You Not!</a></li>
+        <li><a href="#work">Client work</a></li>
+        <li><a href="#vrpg">VRPG</a></li>
+        <li><a href="#unreal">Unreal</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="top" class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Game developer · Game &amp; technical designer · Unity · Unreal · VR</p>
+    <h1>I build gameplay, UI and online multiplayer, from first design doc to Steam release.</h1>
+    <p class="lead">Solo developer of Kid You Not!, a multiplayer party game launching on Steam around Christmas 2026. Before that I shipped features for four client games at OnTheBlockGaming and built a networked multi-user VR RPG for my diploma thesis. Right now I'm also building an Unreal Engine 5 action RPG in C++ with the Gameplay Ability System.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:fbampaniotis@outlook.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/fotios-bampaniotis/">LinkedIn</a>
+      <a class="btn" href="https://github.com/FotisBaba">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section id="kidyounot" class="alt">
+  <div class="wrap pad grid two">
+    <div>
+      <p class="eyebrow">Featured · Bad Bane Games · Game Developer, since Oct 2025</p>
+      <h2>Kid You Not!</h2>
+      <p class="lead">A courtroom party game for 2 to 10 friends on voice chat: one judge, one defendant, and a jury that has to decide if you're lying. Only the defendant knows whether they actually did it. I'm making it solo. It's in Steam playtest now and launches around Christmas 2026.</p>
+      <ul class="bullets">
+        <li>Full match flow: accusations, defense, Q&amp;A, voting and verdicts over multi-trial matches with scoring</li>
+        <li>Systems design: the verdict felt flat until I added secret actions, which gave every vote real stakes and made the expressions mechanic matter</li>
+        <li>Online play with Normcore and Steamworks: public lobby browser and Steam achievements</li>
+        <li>Expressive characters: expression and animation playback, voice-driven mouth movement, avatar creation</li>
+        <li>Drawn answers, an in-game clip recorder for sharing, playtest telemetry and localization into 15 languages</li>
+        <li>Game and technical design docs, with work planned across 18 milestones</li>
+      </ul>
+      <ul class="chips" aria-label="Tech">
+        <li>Unity 6 · URP</li><li>Normcore</li><li>Steamworks</li><li>C#</li>
+      </ul>
+      <a class="more-link" href="https://store.steampowered.com/app/5032120/?utm_source=portfolio">Wishlist on Steam →</a>
+    </div>
+    <div>
+      <div class="media">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/kyn/vote_and_verdict.jpg" aria-label="Gameplay: the jury votes Guilty or Not Guilty and the judge delivers the verdict">
+          <source src="assets/kyn/vote_and_verdict.webm" type="video/webm">
+          <source src="assets/kyn/vote_and_verdict.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="clips">
+        <figure>
+          <div class="media"><video autoplay muted loop playsinline preload="none" poster="assets/kyn/secret_actions.jpg" aria-label="A defendant slipping secret actions into their defense">
+            <source src="assets/kyn/secret_actions.webm" type="video/webm"><source src="assets/kyn/secret_actions.mp4" type="video/mp4"></video></div>
+          <figcaption>Secret actions</figcaption>
+        </figure>
+        <figure>
+          <div class="media"><video autoplay muted loop playsinline preload="none" poster="assets/kyn/drawn_answer.jpg" aria-label="A player drawing their answer on the board">
+            <source src="assets/kyn/drawn_answer.webm" type="video/webm"><source src="assets/kyn/drawn_answer.mp4" type="video/mp4"></video></div>
+          <figcaption>Drawn answers</figcaption>
+        </figure>
+        <figure>
+          <div class="media"><video autoplay muted loop playsinline preload="none" poster="assets/kyn/find_lobby.jpg" aria-label="Browsing public lobbies">
+            <source src="assets/kyn/find_lobby.webm" type="video/webm"><source src="assets/kyn/find_lobby.mp4" type="video/mp4"></video></div>
+          <figcaption>Lobby browser</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap pad">
+    <p class="eyebrow">OnTheBlockGaming · Feb – Sep 2025</p>
+    <h2>Client work</h2>
+    <p class="lead">As a contract game developer and technical designer, I delivered features for four Unity client games, working in agile sprints tracked in Azure DevOps.</p>
+    <div class="grid" style="margin-top:40px">
+      <article class="card">
+        <h3>Step-tracking virtual pet game</h3>
+        <p class="meta">Mobile · PlayFab · Firebase</p>
+        <ul>
+          <li>Step tracking and step-to-currency conversion, synced to PlayFab Economy v2</li>
+          <li>Login with device-ID persistence across sessions</li>
+          <li>Pet kennels, stages, evolution and egg hatching</li>
+          <li>Most of the UI, including the shop, inventory, kennel and a shader-driven step record</li>
+          <li>Map loading optimization and the project's upgrade to Unity 6</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Word puzzle game</h3>
+        <p class="meta">Mobile</p>
+        <ul>
+          <li>Account creation, login and password recovery</li>
+          <li>Virtual and physical keyboard input</li>
+          <li>Leaderboard ranks, average times and streak counters</li>
+          <li>Win flow and end-of-game celebration</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Health-themed exhibition game</h3>
+        <p class="meta">Exhibition build</p>
+        <ul>
+          <li>Tutorial steps and click-through fixes</li>
+          <li>Win/lose minigame screens as a reusable component, plus minigame balancing</li>
+          <li>Power-up spawn system</li>
+          <li>Exhibition-only code kept out of other builds with compiler defines</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Puzzle and drawing game</h3>
+        <p class="meta">Tutorial and tools</p>
+        <ul>
+          <li>Click-through tutorial with a win animation</li>
+          <li>Shape and color selection refactored to the command pattern, with undo</li>
+          <li>Loading screen for anonymous login</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="vrpg" class="alt">
+  <div class="wrap pad">
+    <p class="eyebrow">Diploma thesis · Technical University of Crete · School of ECE · 2024</p>
+    <h2>VRPG: build worlds together, then play them</h2>
+    <p class="lead">A networked VR platform I built solo. In creator mode, friends shape a world together. In play mode, one of them becomes the Game Master and narrates while the others fight through it as wizards. Evaluated with users and tested on Oculus Rift S and Quest 2.</p>
+    <a class="more-link" href="https://github.com/FotisBaba/Thesis">Read the thesis on GitHub →</a>
+    <div class="grid vrpg-shots" style="margin-top:40px">
+      <figure>
+        <div class="media"><img src="assets/vrpg/tool-palette.jpg" width="736" height="666" loading="lazy" alt="Circular VR tool palette with terrain brushes, object pages, NPCs, water, trees and sliders for brush size and strength"></div>
+        <figcaption>The tool palette, a diegetic UI I modelled in Blender</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="assets/vrpg/play-mode.jpg" width="706" height="665" loading="lazy" alt="Split view of a graveyard battle: a player's VR view aiming at a ghoul above, the Game Master's overhead view below"></div>
+        <figcaption>Play mode: the player's view (top) and the Game Master's (bottom)</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="assets/vrpg/create-world-door.jpg" width="860" height="576" loading="lazy" alt="A stone archway door beside a wall sign reading Create World"></div>
+        <figcaption>The starting area works as an explorable main menu</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="assets/vrpg/wounded.jpg" width="968" height="654" loading="lazy" alt="Canyon path seen through a pulsing red full-screen vignette"></div>
+        <figcaption>Wounded effect (Shader Graph)</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="assets/vrpg/poisoned.jpg" width="950" height="641" loading="lazy" alt="The same canyon path seen through a green full-screen vignette"></div>
+        <figcaption>Poisoned effect (Shader Graph)</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="assets/vrpg/crafting-bench.jpg" width="788" height="519" loading="lazy" alt="Wooden crafting bench with potions and a book, and an Open Crafting prompt"></div>
+        <figcaption>The crafting bench opens a second route to the boss</figcaption>
+      </figure>
+    </div>
+    <div class="grid features" style="margin-top:48px;gap:32px">
+      <div>
+        <h3>World creator</h3>
+        <p>Networked terrain tools (raise, flatten, smooth, stamp heightmaps, paint textures and holes) plus trees, water, objects, sound zones and NPCs. An object editor handles multi-object edits. Worlds save as JSON locally and to Firebase.</p>
+      </div>
+      <div>
+        <h3>Combat and AI</h3>
+        <p>Fireball and call-lightning spells, crafting, character attributes and levelling, and a boss with nested state machines and attack patterns. Enemies navigate with NavMesh pathfinding.</p>
+      </div>
+      <div>
+        <h3>Game Master tools</h3>
+        <p>Live terrain editing during play, an item spawner, and an audio mixer for narration. A non-linear demo level, tested with volunteer players.</p>
+      </div>
+    </div>
+    <ul class="chips" aria-label="Tech">
+      <li>Unity</li><li>C#</li><li>Normcore</li><li>XR Interaction Toolkit</li><li>OpenXR</li><li>Shader Graph</li><li>Addressables</li><li>Firebase</li><li>Blender</li>
+    </ul>
+  </div>
+</section>
+
+<section id="unreal">
+  <div class="wrap pad grid two">
+    <div>
+      <p class="eyebrow">In progress · Unreal Engine 5</p>
+      <h2>Action RPG in C++</h2>
+      <p class="lead">A third-person action RPG built in C++ on the Gameplay Ability System, my route into Unreal. Once the core combat is done, I'm building an original showcase level to show level and environment design.</p>
+      <ul class="bullets">
+        <li>Abilities, attributes and gameplay effects with GAS, in C++ and Blueprints</li>
+        <li>Light and heavy attack combos, weapon equip and unequip, hit pause</li>
+        <li>A playable showcase level of my own design, targeted for mid-December 2026</li>
+      </ul>
+      <ul class="chips" aria-label="Tech">
+        <li>Unreal Engine 5</li><li>C++</li><li>Blueprints</li><li>GAS</li><li>Enhanced Input</li>
+      </ul>
+      <a class="more-link" href="https://github.com/FotisBaba/Action-RPG">View the code on GitHub →</a>
+    </div>
+    <div class="card systems">
+      <h3>How it's put together</h3>
+      <dl>
+        <div><dt>Ability system</dt><dd>Custom ability system component and attribute set, with damage resolved in a gameplay effect execution calculation (<code>GEExecCalc_DamageTaken</code>).</dd></div>
+        <div><dt>Combat components</dt><dd>A shared pawn combat component, with hero and enemy subclasses, registers weapons by gameplay tag, toggles weapon collision and reports hits.</dd></div>
+        <div><dt>Data-driven start-up</dt><dd>Hero and enemy start-up data assets grant abilities and effects on spawn, so new characters need data, not code.</dd></div>
+        <div><dt>Input through gameplay tags</dt><dd>Enhanced Input actions mapped to gameplay tags in a data asset and routed to abilities by a custom input component.</dd></div>
+        <div><dt>Animation</dt><dd>Base and hero anim instances with linked anim layers per weapon.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="alt">
+  <div class="wrap pad">
+    <h2 class="sm">Skills</h2>
+    <div class="grid four skills" style="margin-top:32px;gap:32px">
+      <div><h3>Engines and code</h3><p>C#, C++. Unity 6 with URP, Shader Graph, Addressables and XR Interaction Toolkit. Unreal Engine 5 with Blueprints and GAS. Blender.</p></div>
+      <div><h3>Online and backend</h3><p>Normcore multiplayer, Steamworks, PlayFab, Firebase, databases.</p></div>
+      <div><h3>Design and process</h3><p>Game and technical design docs, systems balancing, playtesting and telemetry, agile sprints in Azure DevOps, Git and GitHub.</p></div>
+      <div><h3>Also</h3><p>Computer science degree, hardware and microcontrollers. Languages: Greek, English, German (B1).</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="more">
+  <div class="wrap pad">
+    <h2 class="sm">More projects and experience</h2>
+    <div class="grid four" style="margin-top:32px">
+      <article class="card small-card">
+        <p class="when">Jul – Dec 2023</p>
+        <h3>XR Researcher, Surreal Lab</h3>
+        <p class="body">VR gameplay, controls and UI in Unity, networked interactions, and profiling at the Technical University of Crete.</p>
+      </article>
+      <article class="card small-card">
+        <p class="when">Oct 2025 – Jun 2026</p>
+        <h3>Psychodrama and sociodrama studies</h3>
+        <p class="body">First training cycle in role-play and group dynamics, which feeds straight into how I design social and party games.</p>
+      </article>
+      <article class="card small-card">
+        <p class="when">Unity · 3D puzzle</p>
+        <h3>Solar Worker</h3>
+        <p class="body">Rotate solar panels to face the sun on randomized levels, while a bird chases you and a friendly NPC scares it off.</p>
+      </article>
+      <article class="card small-card">
+        <p class="when">Unity · board game</p>
+        <h3>Interstellar Hotel</h3>
+        <p class="body">A 2–4 player turn-based sci-fi economic board game, and my first game project.</p>
+      </article>
+      <article class="card small-card">
+        <p class="when">Level design jam</p>
+        <h3><a href="https://babain.itch.io/level-design-jam-9">Extreme Minutes</a></h3>
+        <p class="body">My entry for Steve Lee's 9th Level Design Jam, playable on itch.io.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap pad" style="padding-bottom:64px">
+    <h2>Let's make something.</h2>
+    <p class="lead">I'm open to game developer, gameplay programmer, game and technical designer, and 3D/VR developer roles, plus QA and freelance Unity work (bug fixing, prototyping). Full-time, part-time or contract; remote or on-site.</p>
+    <div class="btns" style="margin-top:28px">
+      <a class="btn primary" href="mailto:fbampaniotis@outlook.com">fbampaniotis@outlook.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/fotios-bampaniotis/">LinkedIn</a>
+      <a class="btn" href="https://github.com/FotisBaba">GitHub</a>
+      <a class="btn" href="https://babain.itch.io">itch.io</a>
+    </div>
+    <footer>© 2026 Fotis Bampaniotis</footer>
+  </div>
+</section>
+</main>
+
+</body>
+</html>
